@@ -1,49 +1,237 @@
-filename,class,fold,predicted_class,correct
-5-179860-A-43.wav,car_horn,5,car_horn,True
-5-179863-A-43.wav,car_horn,5,door_wood_knock,False
-5-179865-A-43.wav,car_horn,5,car_horn,True
-5-179866-A-43.wav,car_horn,5,door_wood_knock,False
-5-179868-A-43.wav,car_horn,5,car_horn,True
-5-180156-A-43.wav,car_horn,5,car_horn,True
-5-180156-B-43.wav,car_horn,5,car_horn,True
-5-180156-C-43.wav,car_horn,5,car_horn,True
-5-117118-A-42.wav,siren,5,siren,True
-5-117120-A-42.wav,siren,5,siren,True
-5-117122-A-42.wav,siren,5,siren,True
-5-133989-A-42.wav,siren,5,siren,True
-5-133989-B-42.wav,siren,5,siren,True
-5-150409-A-42.wav,siren,5,car_horn,False
-5-160551-A-42.wav,siren,5,siren,True
-5-184323-A-42.wav,siren,5,siren,True
-5-218980-A-30.wav,door_wood_knock,5,door_wood_knock,True
-5-218981-A-30.wav,door_wood_knock,5,door_wood_knock,True
-5-235644-A-30.wav,door_wood_knock,5,door_wood_knock,True
-5-250026-A-30.wav,door_wood_knock,5,dog,False
-5-250026-B-30.wav,door_wood_knock,5,door_wood_knock,True
-5-251426-A-30.wav,door_wood_knock,5,door_wood_knock,True
-5-251426-B-30.wav,door_wood_knock,5,door_wood_knock,True
-5-256512-A-30.wav,door_wood_knock,5,door_wood_knock,True
-5-151085-A-20.wav,crying_baby,5,crying_baby,True
-5-198411-A-20.wav,crying_baby,5,crying_baby,True
-5-198411-B-20.wav,crying_baby,5,crying_baby,True
-5-198411-C-20.wav,crying_baby,5,crying_baby,True
-5-198411-D-20.wav,crying_baby,5,crying_baby,True
-5-198411-E-20.wav,crying_baby,5,crying_baby,True
-5-198411-F-20.wav,crying_baby,5,crying_baby,True
-5-198411-G-20.wav,crying_baby,5,crying_baby,True
-5-203128-A-0.wav,dog,5,dog,True
-5-203128-B-0.wav,dog,5,dog,True
-5-208030-A-0.wav,dog,5,dog,True
-5-212454-A-0.wav,dog,5,dog,True
-5-213855-A-0.wav,dog,5,dog,True
-5-217158-A-0.wav,dog,5,siren,False
-5-231762-A-0.wav,dog,5,dog,True
-5-9032-A-0.wav,dog,5,dog,True
-5-221528-A-39.wav,glass_breaking,5,glass_breaking,True
-5-221529-A-39.wav,glass_breaking,5,glass_breaking,True
-5-233605-A-39.wav,glass_breaking,5,glass_breaking,True
-5-233607-A-39.wav,glass_breaking,5,glass_breaking,True
-5-257642-A-39.wav,glass_breaking,5,glass_breaking,True
-5-260432-A-39.wav,glass_breaking,5,glass_breaking,True
-5-260433-A-39.wav,glass_breaking,5,glass_breaking,True
-5-260434-A-39.wav,glass_breaking,5,glass_breaking,True
+dataset,filename,file_path,class,split,predicted_class,correct,confidence
+animal,animal_sounds_caoofficial_Kus_109_v2 (45).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (45).wav,Bird,test,Bird,True,0.811979436221374
+animal,animal_sounds_caoofficial_cat_31.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_31.wav,Cat,test,Cat,True,0.6418810043959309
+animal,animal_sounds_ggquang_dog_7 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_7 (2).wav,Dog,test,Dog,True,0.9709614276467083
+animal,animal_sounds_caoofficial_cat_94.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_94.wav,Cat,test,Cat,True,0.93833602928576
+animal,animal_sounds_caoofficial_cat_67.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_67.wav,Cat,test,Cat,True,0.3524219557799887
+animal,animal_sounds_ggquang_5-194899-D.wav,data/processed/audio/Cow/animal_sounds_ggquang_5-194899-D.wav,Cow,test,Cow,True,0.29408575899074785
+animal,animal_sounds_caoofficial_dog_20.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_20.wav,Dog,test,Dog,True,0.6103052094523822
+animal,animal_sounds_caoofficial_dog_52.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_52.wav,Dog,test,Dog,True,0.9167201971341116
+animal,animal_sounds_caoofficial_kurbaga_19.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_19.wav,Frog,test,Frog,True,0.9589857164205186
+animal,animal_sounds_ggquang_inek_8.wav,data/processed/audio/Cow/animal_sounds_ggquang_inek_8.wav,Cow,test,Cow,True,0.897882991654265
+animal,animal_sounds_ggquang_dog_21 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_21 (2).wav,Dog,test,Dog,True,0.9570679794215988
+animal,animal_sounds_caoofficial_kurbaga_33.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_33.wav,Frog,test,Frog,True,0.9363991584127354
+animal,animal_sounds_ggquang_Cow_16.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_16.wav,Cow,test,Cow,True,0.9334750412122611
+animal,animal_sounds_caoofficial_dog_129.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_129.wav,Dog,test,Dog,True,0.9540278294758497
+animal,animal_sounds_caoofficial_koyun_28.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_28.wav,Sheep,test,Sheep,True,0.45159803140798876
+animal,animal_sounds_ggquang_dog_6 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_6 (2).wav,Dog,test,Dog,True,0.9566343892632979
+animal,animal_sounds_ggquang_dog_33 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_33 (2).wav,Dog,test,Dog,True,0.9512221724308801
+animal,animal_sounds_ggquang_3-70962-A.wav,data/processed/audio/Frog/animal_sounds_ggquang_3-70962-A.wav,Frog,test,Frog,True,0.873884720758972
+animal,animal_sounds_caoofficial_Kus_71.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_71.wav,Bird,test,Bird,True,0.9803668686031904
+animal,animal_sounds_ggquang_3-124376-A.wav,data/processed/audio/Cow/animal_sounds_ggquang_3-124376-A.wav,Cow,test,Cow,True,0.8933685053038409
+animal,animal_sounds_ggquang_kurbaga_20.wav,data/processed/audio/Frog/animal_sounds_ggquang_kurbaga_20.wav,Frog,test,Frog,True,0.9045856676154268
+animal,animal_sounds_caoofficial_cat_52.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_52.wav,Cat,test,Frog,False,0.5271266557112915
+animal,animal_sounds_ggquang_5-231762-A.wav,data/processed/audio/Dog/animal_sounds_ggquang_5-231762-A.wav,Dog,test,Dog,True,0.9956397243402189
+animal,animal_sounds_caoofficial_cat_64.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_64.wav,Cat,test,crying_baby,False,0.5970602045255291
+animal,animal_sounds_caoofficial_esek_22.wav,data/processed/audio/Donkey/animal_sounds_caoofficial_esek_22.wav,Donkey,test,Donkey,True,0.7725702436218918
+animal,animal_sounds_caoofficial_Kus_89.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_89.wav,Bird,test,Bird,True,0.6237193911423626
+animal,animal_sounds_caoofficial_aslan_45.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_45.wav,Lion,test,Lion,True,0.5213312103949501
+animal,animal_sounds_caoofficial_tavuk_27.wav,data/processed/audio/Chicken/animal_sounds_caoofficial_tavuk_27.wav,Chicken,test,Bird,False,0.2522975301070994
+animal,animal_sounds_ggquang_4-213915-B.wav,data/processed/audio/Cow/animal_sounds_ggquang_4-213915-B.wav,Cow,test,Cow,True,0.9610713469181699
+animal,animal_sounds_caoofficial_Kus_97.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_97.wav,Bird,test,Bird,True,0.9780546454896875
+animal,animal_sounds_caoofficial_kurbaga_11.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_11.wav,Frog,test,Frog,True,0.9267679810201219
+animal,animal_sounds_ggquang_Frog_45.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_45.wav,Frog,test,Frog,True,0.3293831645888517
+animal,animal_sounds_caoofficial_inek_46.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_46.wav,Cow,test,Cow,True,0.9355718136048172
+animal,animal_sounds_caoofficial_cat_174.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_174.wav,Cat,test,Cow,False,0.45995517474665804
+animal,animal_sounds_caoofficial_dog_189.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_189.wav,Dog,test,Dog,True,0.9676315750448428
+animal,animal_sounds_caoofficial_cat_46.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_46.wav,Cat,test,Cat,True,0.4753954447130199
+animal,animal_sounds_ggquang_5-156026-B.wav,data/processed/audio/Frog/animal_sounds_ggquang_5-156026-B.wav,Frog,test,Frog,True,0.8043435778336215
+animal,animal_sounds_caoofficial_Kus_109_v2 (1).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (1).wav,Bird,test,Bird,True,0.9825292174839376
+animal,animal_sounds_caoofficial_Kus_16.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_16.wav,Bird,test,Bird,True,0.974925646513031
+animal,animal_sounds_caoofficial_Kus_100.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_100.wav,Bird,test,Bird,True,0.7407927554211157
+animal,animal_sounds_ggquang_1-100032-A.wav,data/processed/audio/Dog/animal_sounds_ggquang_1-100032-A.wav,Dog,test,Dog,True,0.9581501883737478
+animal,animal_sounds_caoofficial_maymun_11.wav,data/processed/audio/Monkey/animal_sounds_caoofficial_maymun_11.wav,Monkey,test,Frog,False,0.7582737241528767
+animal,animal_sounds_ggquang_Cow_30.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_30.wav,Cow,test,Cow,True,0.9441033308828697
+animal,animal_sounds_caoofficial_dog_118.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_118.wav,Dog,test,Dog,True,0.9776924911862039
+animal,animal_sounds_caoofficial_cat_189.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_189.wav,Cat,test,Cat,True,0.5484754707287445
+animal,animal_sounds_caoofficial_inek_74.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_74.wav,Cow,test,Cow,True,0.9040746151522946
+animal,animal_sounds_ggquang_Frog_36.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_36.wav,Frog,test,Frog,True,0.9372806709451359
+animal,animal_sounds_ggquang_dog_13 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_13 (2).wav,Dog,test,Dog,True,0.9960422508955562
+animal,animal_sounds_caoofficial_kurbaga_30.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_30.wav,Frog,test,Frog,True,0.9219898637919589
+animal,animal_sounds_caoofficial_dog_33.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_33.wav,Dog,test,Dog,True,0.9484907775160295
+animal,animal_sounds_ggquang_4-99644-C.wav,data/processed/audio/Frog/animal_sounds_ggquang_4-99644-C.wav,Frog,test,Frog,True,0.9057481611484232
+animal,animal_sounds_caoofficial_esek_16.wav,data/processed/audio/Donkey/animal_sounds_caoofficial_esek_16.wav,Donkey,test,Donkey,True,0.7725702436218918
+animal,animal_sounds_caoofficial_koyun_35.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_35.wav,Sheep,test,Sheep,True,0.674012914695214
+animal,animal_sounds_ggquang_dog_9 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_9 (2).wav,Dog,test,Dog,True,0.8900598842972608
+animal,animal_sounds_ggquang_Dog_31.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_31.wav,Dog,test,Dog,True,0.7522674036791389
+animal,animal_sounds_caoofficial_cat_87.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_87.wav,Cat,test,Cat,True,0.8736816571687844
+animal,animal_sounds_caoofficial_cat_74.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_74.wav,Cat,test,Cat,True,0.958455614167296
+animal,animal_sounds_caoofficial_cat_100.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_100.wav,Cat,test,Cat,True,0.5282941459977603
+animal,animal_sounds_ggquang_3-136288-A.wav,data/processed/audio/Dog/animal_sounds_ggquang_3-136288-A.wav,Dog,test,Dog,True,0.7397579282516346
+animal,animal_sounds_caoofficial_cat_140.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_140.wav,Cat,test,Cat,True,0.7792962680507703
+animal,animal_sounds_caoofficial_cat_59.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_59.wav,Cat,test,Cat,True,0.5828215037631165
+animal,animal_sounds_caoofficial_dog_173.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_173.wav,Dog,test,Cow,False,0.3125646469549059
+animal,animal_sounds_caoofficial_inek_51.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_51.wav,Cow,test,Cow,True,0.9276944531365927
+animal,animal_sounds_caoofficial_Kus_109_v2 (24).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (24).wav,Bird,test,Bird,True,0.9600284675426607
+animal,animal_sounds_caoofficial_inek_75.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_75.wav,Cow,test,Cow,True,0.8690027676003332
+animal,animal_sounds_caoofficial_Kus_32.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_32.wav,Bird,test,Bird,True,0.9932148918046245
+animal,animal_sounds_caoofficial_aslan_8.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_8.wav,Lion,test,Cow,False,0.46875955050356655
+animal,animal_sounds_caoofficial_Kus_109_v2 (30).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (30).wav,Bird,test,Bird,True,0.9872165574772194
+animal,animal_sounds_caoofficial_kurbaga_1.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_1.wav,Frog,test,Frog,True,0.9083104150562327
+animal,animal_sounds_caoofficial_Kus_109_v2 (92).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (92).wav,Bird,test,glass_breaking,False,0.9150079986597582
+animal,animal_sounds_ggquang_inek_11.wav,data/processed/audio/Cow/animal_sounds_ggquang_inek_11.wav,Cow,test,Cow,True,0.9092153362030647
+animal,animal_sounds_caoofficial_Kus_68.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_68.wav,Bird,test,Bird,True,0.9594193425765739
+animal,animal_sounds_ggquang_1-59513-A.wav,data/processed/audio/Dog/animal_sounds_ggquang_1-59513-A.wav,Dog,test,Dog,True,0.9678668346415857
+animal,animal_sounds_ggquang_Dog_37.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_37.wav,Dog,test,Dog,True,0.7432890781350124
+animal,animal_sounds_caoofficial_dog_149.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_149.wav,Dog,test,car_horn,False,0.33654676578557474
+animal,animal_sounds_caoofficial_cat_77.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_77.wav,Cat,test,Cat,True,0.7190524571473406
+animal,animal_sounds_caoofficial_Kus_109_v2 (13).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (13).wav,Bird,test,Bird,True,0.9335443246271582
+animal,animal_sounds_caoofficial_Kus_109_v2 (66).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (66).wav,Bird,test,Bird,True,0.9553278032663152
+animal,animal_sounds_caoofficial_cat_164.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_164.wav,Cat,test,Cat,True,0.8825494953263602
+animal,animal_sounds_ggquang_Frog_19.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_19.wav,Frog,test,Frog,True,0.9286474992456157
+animal,animal_sounds_caoofficial_Kus_109_v2 (62).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (62).wav,Bird,test,Bird,True,0.3386132710420743
+animal,animal_sounds_ggquang_2-32515-A.wav,data/processed/audio/Frog/animal_sounds_ggquang_2-32515-A.wav,Frog,test,Frog,True,0.8196279172003008
+animal,animal_sounds_caoofficial_koyun_9.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_9.wav,Sheep,test,glass_breaking,False,0.4588934339045981
+animal,animal_sounds_ggquang_Dog_43.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_43.wav,Dog,test,Dog,True,0.9224694196361826
+animal,animal_sounds_caoofficial_dog_53.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_53.wav,Dog,test,Dog,True,0.9429302612967795
+animal,animal_sounds_ggquang_Frog_28.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_28.wav,Frog,test,Frog,True,0.7888557655230141
+animal,animal_sounds_caoofficial_inek_34.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_34.wav,Cow,test,Cow,True,0.9674645847198682
+animal,animal_sounds_ggquang_Cow_5.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_5.wav,Cow,test,Cow,True,0.9380648513500071
+animal,animal_sounds_caoofficial_Kus_6.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_6.wav,Bird,test,Bird,True,0.9905588934506694
+animal,animal_sounds_caoofficial_cat_156.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_156.wav,Cat,test,Cat,True,0.6144406693486454
+animal,animal_sounds_ggquang_dog_15 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_15 (2).wav,Dog,test,Dog,True,0.9870887290880969
+animal,animal_sounds_ggquang_4-181955-B.wav,data/processed/audio/Cow/animal_sounds_ggquang_4-181955-B.wav,Cow,test,Cow,True,0.8307916838738088
+animal,animal_sounds_caoofficial_cat_190.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_190.wav,Cat,test,Cat,True,0.9132349265355768
+animal,animal_sounds_caoofficial_dog_14.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_14.wav,Dog,test,Dog,True,0.9599149301535767
+animal,animal_sounds_caoofficial_cat_176.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_176.wav,Cat,test,Chicken,False,0.5607862047595223
+animal,animal_sounds_ggquang_5-203128-B.wav,data/processed/audio/Dog/animal_sounds_ggquang_5-203128-B.wav,Dog,test,Dog,True,0.9534540494843037
+animal,animal_sounds_caoofficial_Kus_109_v2 (19).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (19).wav,Bird,test,Bird,True,0.7836915990705224
+animal,animal_sounds_caoofficial_cat_8.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_8.wav,Cat,test,Cat,True,0.8364534493230947
+animal,animal_sounds_caoofficial_cat_144.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_144.wav,Cat,test,crying_baby,False,0.2973813544942276
+animal,animal_sounds_caoofficial_cat_19.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_19.wav,Cat,test,Cat,True,0.7083899174295597
+animal,animal_sounds_caoofficial_kurbaga_28.wav,data/processed/audio/Frog/animal_sounds_caoofficial_kurbaga_28.wav,Frog,test,Frog,True,0.9157143573226992
+animal,animal_sounds_caoofficial_tavuk_20.wav,data/processed/audio/Chicken/animal_sounds_caoofficial_tavuk_20.wav,Chicken,test,Dog,False,0.9663071149528866
+animal,animal_sounds_caoofficial_koyun_39.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_39.wav,Sheep,test,Sheep,True,0.3134979714988842
+animal,animal_sounds_caoofficial_koyun_14.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_14.wav,Sheep,test,Cat,False,0.5275988280621208
+animal,animal_sounds_ggquang_Cow_27.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_27.wav,Cow,test,Cow,True,0.8972154950014524
+animal,animal_sounds_caoofficial_Kus_79.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_79.wav,Bird,test,Bird,True,0.9700100337612186
+animal,animal_sounds_caoofficial_Kus_58.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_58.wav,Bird,test,Bird,True,0.960176160705571
+animal,animal_sounds_caoofficial_dog_18.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_18.wav,Dog,test,Dog,True,0.28927140706929727
+animal,animal_sounds_ggquang_Dog_45.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_45.wav,Dog,test,Dog,True,0.9662708259966045
+animal,animal_sounds_caoofficial_aslan_39.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_39.wav,Lion,test,Lion,True,0.9329502970987388
+animal,animal_sounds_caoofficial_inek_43.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_43.wav,Cow,test,Cow,True,0.8706144479112717
+animal,animal_sounds_caoofficial_dog_140.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_140.wav,Dog,test,Dog,True,0.933763124830311
+animal,animal_sounds_caoofficial_Kus_59.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_59.wav,Bird,test,Bird,True,0.9937907567036985
+animal,animal_sounds_caoofficial_cat_34.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_34.wav,Cat,test,Dog,False,0.5475239210009587
+animal,animal_sounds_ggquang_inek_43.wav,data/processed/audio/Cow/animal_sounds_ggquang_inek_43.wav,Cow,test,Cow,True,0.8706144479112717
+animal,animal_sounds_caoofficial_dog_108.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_108.wav,Dog,test,glass_breaking,False,0.37536753901714587
+animal,animal_sounds_caoofficial_Kus_109_v2 (33).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (33).wav,Bird,test,Bird,True,0.9197484584608688
+animal,animal_sounds_ggquang_4-154793-A.wav,data/processed/audio/Frog/animal_sounds_ggquang_4-154793-A.wav,Frog,test,Frog,True,0.8486173702128417
+animal,animal_sounds_ggquang_3-160993-A.wav,data/processed/audio/Cow/animal_sounds_ggquang_3-160993-A.wav,Cow,test,Cow,True,0.9414519895330923
+animal,animal_sounds_ggquang_Dog_3.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_3.wav,Dog,test,Dog,True,0.9478041107048425
+animal,animal_sounds_ggquang_dog_41 (3).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_41 (3).wav,Dog,test,Dog,True,0.9344084545660395
+animal,animal_sounds_caoofficial_inek_63.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_63.wav,Cow,test,Cow,True,0.9030570969685351
+animal,animal_sounds_caoofficial_dog_177.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_177.wav,Dog,test,Dog,True,0.9528005245040698
+animal,animal_sounds_ggquang_Cow_8.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_8.wav,Cow,test,Cow,True,0.9674645847198682
+animal,animal_sounds_ggquang_3-71964-B.wav,data/processed/audio/Frog/animal_sounds_ggquang_3-71964-B.wav,Frog,test,Frog,True,0.9777988572763048
+animal,animal_sounds_caoofficial_cat_194.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_194.wav,Cat,test,Dog,False,0.34286379824856966
+animal,animal_sounds_caoofficial_dog_154.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_154.wav,Dog,test,Dog,True,0.570658930086661
+animal,animal_sounds_caoofficial_tavuk_3.wav,data/processed/audio/Chicken/animal_sounds_caoofficial_tavuk_3.wav,Chicken,test,Cow,False,0.2934181674507115
+animal,animal_sounds_caoofficial_maymun_22.wav,data/processed/audio/Monkey/animal_sounds_caoofficial_maymun_22.wav,Monkey,test,Bird,False,0.2931129682628385
+animal,animal_sounds_ggquang_5-194899-B.wav,data/processed/audio/Cow/animal_sounds_ggquang_5-194899-B.wav,Cow,test,Dog,False,0.3247587039516988
+animal,animal_sounds_caoofficial_cat_81.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_81.wav,Cat,test,Cat,True,0.7567679201481242
+animal,animal_sounds_caoofficial_dog_156.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_156.wav,Dog,test,Dog,True,0.6581784557537818
+animal,animal_sounds_caoofficial_cat_183.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_183.wav,Cat,test,Cat,True,0.37397280395056387
+animal,animal_sounds_ggquang_Cow_29.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_29.wav,Cow,test,Cow,True,0.9238710901761299
+animal,animal_sounds_caoofficial_koyun_13.wav,data/processed/audio/Sheep/animal_sounds_caoofficial_koyun_13.wav,Sheep,test,Frog,False,0.47924980601759876
+animal,animal_sounds_caoofficial_tavuk_6.wav,data/processed/audio/Chicken/animal_sounds_caoofficial_tavuk_6.wav,Chicken,test,Dog,False,0.821849682985753
+animal,animal_sounds_ggquang_Frog_13.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_13.wav,Frog,test,Frog,True,0.9246107590264189
+animal,animal_sounds_caoofficial_dog_192.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_192.wav,Dog,test,Dog,True,0.9312968110422478
+animal,animal_sounds_ggquang_Frog_10.wav,data/processed/audio/Frog/animal_sounds_ggquang_Frog_10.wav,Frog,test,Frog,True,0.9236354585644707
+animal,animal_sounds_caoofficial_Kus_109_v2 (85).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (85).wav,Bird,test,Bird,True,0.7999548172452606
+animal,animal_sounds_caoofficial_Kus_88.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_88.wav,Bird,test,Bird,True,0.9761609151136046
+animal,animal_sounds_ggquang_kurbaga_22.wav,data/processed/audio/Frog/animal_sounds_ggquang_kurbaga_22.wav,Frog,test,Frog,True,0.9399602070080356
+animal,animal_sounds_caoofficial_Kus_109_v2 (79).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (79).wav,Bird,test,Bird,True,0.5823654250424487
+animal,animal_sounds_ggquang_dog_43 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_43 (2).wav,Dog,test,Dog,True,0.9837564273936228
+animal,animal_sounds_caoofficial_maymun_6.wav,data/processed/audio/Monkey/animal_sounds_caoofficial_maymun_6.wav,Monkey,test,Monkey,True,0.8857323306460395
+animal,animal_sounds_caoofficial_Kus_109_v2 (27).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (27).wav,Bird,test,Bird,True,0.974925646513031
+animal,animal_sounds_caoofficial_dog_164.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_164.wav,Dog,test,Dog,True,0.9644824614831242
+animal,animal_sounds_caoofficial_inek_29.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_29.wav,Cow,test,Cow,True,0.9380648513500071
+animal,animal_sounds_caoofficial_aslan_21.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_21.wav,Lion,test,Lion,True,0.7991835145740382
+animal,animal_sounds_caoofficial_aslan_11.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_11.wav,Lion,test,Lion,True,0.35240109073403836
+animal,animal_sounds_ggquang_Dog_25.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_25.wav,Dog,test,Dog,True,0.9729968411011582
+animal,animal_sounds_ggquang_inek_23.wav,data/processed/audio/Cow/animal_sounds_ggquang_inek_23.wav,Cow,test,Cow,True,0.8863938038162621
+animal,animal_sounds_caoofficial_dog_32.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_32.wav,Dog,test,Dog,True,0.9506325952552394
+animal,animal_sounds_ggquang_Dog_34.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_34.wav,Dog,test,Dog,True,0.9155756760294927
+animal,animal_sounds_ggquang_dog_22 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_22 (2).wav,Dog,test,Dog,True,0.9923727988281413
+animal,animal_sounds_caoofficial_cat_128.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_128.wav,Cat,test,Cat,True,0.5877838207129786
+animal,animal_sounds_ggquang_dog_17 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_17 (2).wav,Dog,test,Dog,True,0.9161391170397545
+animal,animal_sounds_caoofficial_cat_96.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_96.wav,Cat,test,Cat,True,0.9310233923494327
+animal,animal_sounds_caoofficial_cat_114.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_114.wav,Cat,test,Cat,True,0.4826548607189165
+animal,animal_sounds_ggquang_1-18755-B.wav,data/processed/audio/Frog/animal_sounds_ggquang_1-18755-B.wav,Frog,test,Dog,False,0.34285214248081725
+animal,animal_sounds_caoofficial_esek_13.wav,data/processed/audio/Donkey/animal_sounds_caoofficial_esek_13.wav,Donkey,test,Donkey,True,0.783484805365776
+animal,animal_sounds_caoofficial_cat_126.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_126.wav,Cat,test,Cat,True,0.9150731920017724
+animal,animal_sounds_caoofficial_dog_40.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_40.wav,Dog,test,Dog,True,0.7522674036791389
+animal,animal_sounds_caoofficial_Kus_109_v2 (95).wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_109_v2 (95).wav,Bird,test,Bird,True,0.3060799680572591
+animal,animal_sounds_caoofficial_aslan_42.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_42.wav,Lion,test,Lion,True,0.23828034968099085
+animal,animal_sounds_caoofficial_dog_160.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_160.wav,Dog,test,Dog,True,0.9336746138854959
+animal,animal_sounds_caoofficial_inek_19.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_19.wav,Cow,test,Cow,True,0.9740961196448428
+animal,animal_sounds_caoofficial_dog_195.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_195.wav,Dog,test,Dog,True,0.9729968411011582
+animal,animal_sounds_ggquang_dog_17 (3).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_17 (3).wav,Dog,test,Dog,True,0.9750769787011005
+animal,animal_sounds_ggquang_Dog_46.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_46.wav,Dog,test,Dog,True,0.9831233661920987
+animal,animal_sounds_caoofficial_inek_2.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_2.wav,Cow,test,Cow,True,0.9143014444597435
+animal,animal_sounds_caoofficial_cat_169.wav,data/processed/audio/Cat/animal_sounds_caoofficial_cat_169.wav,Cat,test,Cat,True,0.26011445953541357
+animal,animal_sounds_caoofficial_dog_42.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_42.wav,Dog,test,Dog,True,0.9540644029822866
+animal,animal_sounds_caoofficial_Kus_72.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_72.wav,Bird,test,Bird,True,0.9678668928131988
+animal,animal_sounds_caoofficial_Kus_76.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_76.wav,Bird,test,Bird,True,0.9814832089930446
+animal,animal_sounds_ggquang_Cow_6.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_6.wav,Cow,test,Cow,True,0.9085052148268947
+animal,animal_sounds_ggquang_Dog_47.wav,data/processed/audio/Dog/animal_sounds_ggquang_Dog_47.wav,Dog,test,Dog,True,0.9245361201032378
+animal,animal_sounds_caoofficial_dog_132.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_132.wav,Dog,test,Dog,True,0.41071325178012563
+animal,animal_sounds_caoofficial_dog_38.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_38.wav,Dog,test,Dog,True,0.9512515213150551
+animal,animal_sounds_caoofficial_aslan_3.wav,data/processed/audio/Lion/animal_sounds_caoofficial_aslan_3.wav,Lion,test,Lion,True,0.8999683122289014
+animal,animal_sounds_caoofficial_Kus_3.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_3.wav,Bird,test,Bird,True,0.990579049993693
+animal,animal_sounds_ggquang_dog_8 (2).wav,data/processed/audio/Dog/animal_sounds_ggquang_dog_8 (2).wav,Dog,test,Dog,True,0.9715337319945886
+animal,animal_sounds_caoofficial_inek_38.wav,data/processed/audio/Cow/animal_sounds_caoofficial_inek_38.wav,Cow,test,Cat,False,0.2856530189225458
+animal,animal_sounds_caoofficial_dog_76.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_76.wav,Dog,test,Dog,True,0.7432890781350124
+animal,animal_sounds_ggquang_Cow_7.wav,data/processed/audio/Cow/animal_sounds_ggquang_Cow_7.wav,Cow,test,Cow,True,0.90826386682178
+animal,animal_sounds_caoofficial_tavuk_2.wav,data/processed/audio/Chicken/animal_sounds_caoofficial_tavuk_2.wav,Chicken,test,Cat,False,0.331200858449337
+animal,animal_sounds_caoofficial_dog_115.wav,data/processed/audio/Dog/animal_sounds_caoofficial_dog_115.wav,Dog,test,Dog,True,0.5481090835197593
+animal,animal_sounds_caoofficial_Kus_42.wav,data/processed/audio/Bird/animal_sounds_caoofficial_Kus_42.wav,Bird,test,Bird,True,0.9317238517786988
+esc50,5-117118-A-42.wav,data\processed\esc50_16khz\siren\5-117118-A-42.wav,siren,test,siren,True,0.7928028675022178
+esc50,5-117120-A-42.wav,data\processed\esc50_16khz\siren\5-117120-A-42.wav,siren,test,Cat,False,0.22839203355238907
+esc50,5-117122-A-42.wav,data\processed\esc50_16khz\siren\5-117122-A-42.wav,siren,test,siren,True,0.7363375201642156
+esc50,5-133989-A-42.wav,data\processed\esc50_16khz\siren\5-133989-A-42.wav,siren,test,Dog,False,0.4176466062681812
+esc50,5-133989-B-42.wav,data\processed\esc50_16khz\siren\5-133989-B-42.wav,siren,test,siren,True,0.8096302014935316
+esc50,5-150409-A-42.wav,data\processed\esc50_16khz\siren\5-150409-A-42.wav,siren,test,Dog,False,0.3299168553301219
+esc50,5-151085-A-20.wav,data\processed\esc50_16khz\crying_baby\5-151085-A-20.wav,crying_baby,test,crying_baby,True,0.7700920448054807
+esc50,5-160551-A-42.wav,data\processed\esc50_16khz\siren\5-160551-A-42.wav,siren,test,siren,True,0.8132295161104773
+esc50,5-179860-A-43.wav,data\processed\esc50_16khz\car_horn\5-179860-A-43.wav,car_horn,test,car_horn,True,0.3631326120735223
+esc50,5-179863-A-43.wav,data\processed\esc50_16khz\car_horn\5-179863-A-43.wav,car_horn,test,Cow,False,0.5385937304031806
+esc50,5-179865-A-43.wav,data\processed\esc50_16khz\car_horn\5-179865-A-43.wav,car_horn,test,car_horn,True,0.748520625533644
+esc50,5-179866-A-43.wav,data\processed\esc50_16khz\car_horn\5-179866-A-43.wav,car_horn,test,Cow,False,0.35691401343242046
+esc50,5-179868-A-43.wav,data\processed\esc50_16khz\car_horn\5-179868-A-43.wav,car_horn,test,car_horn,True,0.5498981741344596
+esc50,5-180156-A-43.wav,data\processed\esc50_16khz\car_horn\5-180156-A-43.wav,car_horn,test,car_horn,True,0.6858386130345931
+esc50,5-180156-B-43.wav,data\processed\esc50_16khz\car_horn\5-180156-B-43.wav,car_horn,test,car_horn,True,0.5419622167461734
+esc50,5-180156-C-43.wav,data\processed\esc50_16khz\car_horn\5-180156-C-43.wav,car_horn,test,car_horn,True,0.6034812947287688
+esc50,5-184323-A-42.wav,data\processed\esc50_16khz\siren\5-184323-A-42.wav,siren,test,Dog,False,0.5874263270946329
+esc50,5-198411-A-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-A-20.wav,crying_baby,test,crying_baby,True,0.6783861341852347
+esc50,5-198411-B-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-B-20.wav,crying_baby,test,crying_baby,True,0.8541991754770822
+esc50,5-198411-C-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-C-20.wav,crying_baby,test,Dog,False,0.7173379215797762
+esc50,5-198411-D-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-D-20.wav,crying_baby,test,crying_baby,True,0.7926743055628971
+esc50,5-198411-E-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-E-20.wav,crying_baby,test,Dog,False,0.36274847375397423
+esc50,5-198411-F-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-F-20.wav,crying_baby,test,crying_baby,True,0.5132937271200517
+esc50,5-198411-G-20.wav,data\processed\esc50_16khz\crying_baby\5-198411-G-20.wav,crying_baby,test,Dog,False,0.3077982286223243
+esc50,5-203128-A-0.wav,data\processed\esc50_16khz\dog\5-203128-A-0.wav,Dog,test,Dog,True,0.9534739189210685
+esc50,5-203128-B-0.wav,data\processed\esc50_16khz\dog\5-203128-B-0.wav,Dog,test,Dog,True,0.9617554956110617
+esc50,5-208030-A-0.wav,data\processed\esc50_16khz\dog\5-208030-A-0.wav,Dog,test,Dog,True,0.8247977661110758
+esc50,5-212454-A-0.wav,data\processed\esc50_16khz\dog\5-212454-A-0.wav,Dog,test,Dog,True,0.9790454714031632
+esc50,5-213855-A-0.wav,data\processed\esc50_16khz\dog\5-213855-A-0.wav,Dog,test,Dog,True,0.9135484779670201
+esc50,5-217158-A-0.wav,data\processed\esc50_16khz\dog\5-217158-A-0.wav,Dog,test,Dog,True,0.9409635918199472
+esc50,5-218980-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-218980-A-30.wav,door_wood_knock,test,door_wood_knock,True,0.7395096830365322
+esc50,5-218981-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-218981-A-30.wav,door_wood_knock,test,door_wood_knock,True,0.5988783771483096
+esc50,5-221528-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-221528-A-39.wav,glass_breaking,test,glass_breaking,True,0.8185716133033049
+esc50,5-221529-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-221529-A-39.wav,glass_breaking,test,glass_breaking,True,0.75861226750533
+esc50,5-231762-A-0.wav,data\processed\esc50_16khz\dog\5-231762-A-0.wav,Dog,test,Dog,True,0.9964975750591064
+esc50,5-233605-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-233605-A-39.wav,glass_breaking,test,glass_breaking,True,0.9489773892675557
+esc50,5-233607-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-233607-A-39.wav,glass_breaking,test,glass_breaking,True,0.8805897180225921
+esc50,5-235644-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-235644-A-30.wav,door_wood_knock,test,door_wood_knock,True,0.8637738343639053
+esc50,5-250026-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-250026-A-30.wav,door_wood_knock,test,Dog,False,0.4870413702147863
+esc50,5-250026-B-30.wav,data\processed\esc50_16khz\door_wood_knock\5-250026-B-30.wav,door_wood_knock,test,door_wood_knock,True,0.854023175570179
+esc50,5-251426-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-251426-A-30.wav,door_wood_knock,test,door_wood_knock,True,0.9439029466492702
+esc50,5-251426-B-30.wav,data\processed\esc50_16khz\door_wood_knock\5-251426-B-30.wav,door_wood_knock,test,door_wood_knock,True,0.9831507228653273
+esc50,5-256512-A-30.wav,data\processed\esc50_16khz\door_wood_knock\5-256512-A-30.wav,door_wood_knock,test,door_wood_knock,True,0.968652801799026
+esc50,5-257642-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-257642-A-39.wav,glass_breaking,test,glass_breaking,True,0.6866646700729019
+esc50,5-260432-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-260432-A-39.wav,glass_breaking,test,glass_breaking,True,0.45228255840867443
+esc50,5-260433-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-260433-A-39.wav,glass_breaking,test,glass_breaking,True,0.6915515481157627
+esc50,5-260434-A-39.wav,data\processed\esc50_16khz\glass_breaking\5-260434-A-39.wav,glass_breaking,test,glass_breaking,True,0.44582412832149354
+esc50,5-9032-A-0.wav,data\processed\esc50_16khz\dog\5-9032-A-0.wav,Dog,test,Dog,True,0.895458797362432

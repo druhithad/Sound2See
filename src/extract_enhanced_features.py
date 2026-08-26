@@ -1,6 +1,4 @@
 import os
-import sys
-import joblib
 import numpy as np
 import pandas as pd
 import librosa
@@ -10,9 +8,11 @@ import librosa
 # SETTINGS
 # ============================================================
 
-MODEL_FILE = r"models\sound2see_final.joblib"
+METADATA_FILE = (
+    r"data\processed\combined\combined_metadata.csv"
+)
 
-FEATURE_FILE = (
+OUTPUT_FILE = (
     r"data\processed\combined\enhanced_features.csv"
 )
 
@@ -30,40 +30,10 @@ N_CONTRAST = 7
 
 
 # ============================================================
-# LOAD FEATURE COLUMN ORDER
-# ============================================================
-
-def load_feature_columns():
-
-    metadata_columns = [
-        "dataset",
-        "filename",
-        "file_path",
-        "class",
-        "split"
-    ]
-
-    feature_columns = pd.read_csv(
-        FEATURE_FILE,
-        nrows=0
-    ).columns.tolist()
-
-    feature_columns = [
-        column
-        for column in feature_columns
-        if column not in metadata_columns
-    ]
-
-    return feature_columns
-
-
-# ============================================================
 # FEATURE EXTRACTION
 # ============================================================
 
 def extract_features(audio_file):
-
-    print("\nLoading audio...")
 
     audio, sr = librosa.load(
         audio_file,
@@ -71,20 +41,7 @@ def extract_features(audio_file):
         mono=True
     )
 
-    print(
-        f"Sample rate : {sr} Hz"
-    )
-
-    print(
-        f"Samples     : {len(audio)}"
-    )
-
-    print(
-        f"Duration    : {len(audio) / sr:.2f} seconds"
-    )
-
     features = {}
-
 
     # ========================================================
     # MFCC
@@ -108,9 +65,8 @@ def extract_features(audio_file):
         order=2
     )
 
-
     # ========================================================
-    # TEMPORAL MFCC
+    # TEMPORAL MFCC FEATURES
     # ========================================================
 
     total_frames = mfcc.shape[1]
@@ -155,7 +111,6 @@ def extract_features(audio_file):
                     mfcc_segment[i]
                 )
 
-
     # ========================================================
     # GLOBAL MFCC DELTA
     # ========================================================
@@ -164,16 +119,11 @@ def extract_features(audio_file):
 
         features[
             f"delta_{i + 1}_mean"
-        ] = np.mean(
-            delta[i]
-        )
+        ] = np.mean(delta[i])
 
         features[
             f"delta_{i + 1}_std"
-        ] = np.std(
-            delta[i]
-        )
-
+        ] = np.std(delta[i])
 
     # ========================================================
     # GLOBAL MFCC DELTA-DELTA
@@ -183,16 +133,11 @@ def extract_features(audio_file):
 
         features[
             f"delta2_{i + 1}_mean"
-        ] = np.mean(
-            delta2[i]
-        )
+        ] = np.mean(delta2[i])
 
         features[
             f"delta2_{i + 1}_std"
-        ] = np.std(
-            delta2[i]
-        )
-
+        ] = np.std(delta2[i])
 
     # ========================================================
     # BASIC SPECTRAL FEATURES
@@ -259,9 +204,8 @@ def extract_features(audio_file):
             f"{name}_std"
         ] = np.std(values)
 
-
     # ========================================================
-    # CHROMA
+    # NEW FEATURE 1 — CHROMA
     # ========================================================
 
     chroma = librosa.feature.chroma_stft(
@@ -276,19 +220,14 @@ def extract_features(audio_file):
 
         features[
             f"chroma_{i + 1}_mean"
-        ] = np.mean(
-            chroma[i]
-        )
+        ] = np.mean(chroma[i])
 
         features[
             f"chroma_{i + 1}_std"
-        ] = np.std(
-            chroma[i]
-        )
-
+        ] = np.std(chroma[i])
 
     # ========================================================
-    # SPECTRAL CONTRAST
+    # NEW FEATURE 2 — SPECTRAL CONTRAST
     # ========================================================
 
     nyquist = sr / 2
@@ -345,9 +284,8 @@ def extract_features(audio_file):
             spectral_contrast[i]
         )
 
-
     # ========================================================
-    # TONNETZ
+    # NEW FEATURE 3 — TONNETZ
     # ========================================================
 
     tonnetz = librosa.feature.tonnetz(
@@ -371,7 +309,6 @@ def extract_features(audio_file):
             tonnetz[i]
         )
 
-
     return features
 
 
@@ -382,300 +319,312 @@ def extract_features(audio_file):
 def main():
 
     print("========================================")
-    print("       SOUND2SEE AUDIO PREDICTOR")
+    print(" SOUND2SEE ENHANCED FEATURE EXTRACTION")
     print("========================================")
 
+    metadata = pd.read_csv(
+        METADATA_FILE
+    )
 
-    # ========================================================
-    # COMMAND LINE ARGUMENT
-    # ========================================================
-
-    if len(sys.argv) < 2:
-
-        print("\nUsage:")
-
-        print(
-            "python src\\predict_audio.py "
-            "<audio_file.wav>"
-        )
-
-        print("\nExample:")
-
-        print(
-            "python src\\predict_audio.py "
-            "data\\inference\\sample.wav"
-        )
-
-        return
-
-
-    audio_file = sys.argv[1]
-
-
-    # ========================================================
-    # CHECK AUDIO
-    # ========================================================
-
-    if not os.path.exists(audio_file):
-
-        print(
-            "\nERROR: Audio file not found."
-        )
-
-        print(
-            audio_file
-        )
-
-        return
-
-
-    # ========================================================
-    # CHECK MODEL
-    # ========================================================
-
-    if not os.path.exists(MODEL_FILE):
-
-        print(
-            "\nERROR: Final trained model not found."
-        )
-
-        print(
-            MODEL_FILE
-        )
-
-        return
-
-
-    # ========================================================
-    # CHECK FEATURE FILE
-    # ========================================================
-
-    if not os.path.exists(FEATURE_FILE):
-
-        print(
-            "\nERROR: Feature reference file not found."
-        )
-
-        print(
-            FEATURE_FILE
-        )
-
-        return
-
-
-    # ========================================================
-    # LOAD MODEL
-    # ========================================================
+    expected_files = len(metadata)
 
     print(
-        "\nLoading final trained model..."
+        "\nInput samples:",
+        expected_files
     )
 
-    model = joblib.load(
-        MODEL_FILE
-    )
+    all_features = []
 
+    processed = 0
+    failed = 0
+
+    # --------------------------------------------------------
+    # Process recordings
+    # --------------------------------------------------------
+
+    for index, row in metadata.iterrows():
+
+        audio_file = row["file_path"]
+
+        try:
+
+            extracted = extract_features(
+                audio_file
+            )
+
+            extracted["dataset"] = row["dataset"]
+
+            extracted["filename"] = os.path.basename(
+                audio_file
+            )
+
+            extracted["file_path"] = audio_file
+
+            extracted["class"] = row["class"]
+
+            extracted["split"] = row["split"]
+
+            all_features.append(
+                extracted
+            )
+
+            processed += 1
+
+        except Exception as error:
+
+            failed += 1
+
+            print(
+                f"\nERROR: {audio_file}"
+            )
+
+            print(
+                "Reason:",
+                error
+            )
+
+        if processed > 0 and processed % 100 == 0:
+
+            print(
+                f"Processed {processed}/{expected_files}"
+            )
 
     # ========================================================
-    # EXTRACT FEATURES
+    # DATAFRAME
     # ========================================================
 
-    extracted_features = extract_features(
-        audio_file
+    feature_data = pd.DataFrame(
+        all_features
     )
 
+    # --------------------------------------------------------
+    # Prevent empty DataFrame failure
+    # --------------------------------------------------------
+
+    if feature_data.empty:
+
+        print(
+            "\nERROR: No audio files were successfully processed."
+        )
+
+        print(
+            "Enhanced feature extraction stopped."
+        )
+
+        return
+
+    identifier_columns = [
+        "dataset",
+        "filename",
+        "file_path",
+        "class",
+        "split"
+    ]
+
+    feature_columns = [
+        column
+        for column in feature_data.columns
+        if column not in identifier_columns
+    ]
+
+    feature_data = feature_data[
+        identifier_columns + feature_columns
+    ]
+
+    # ========================================================
+    # VALIDATION
+    # ========================================================
+
+    numeric_data = feature_data[
+        feature_columns
+    ]
+
+    nan_count = numeric_data.isna().sum().sum()
+
+    infinite_count = np.isinf(
+        numeric_data.values
+    ).sum()
+
+    # ========================================================
+    # SAVE
+    # ========================================================
+
+    output_directory = os.path.dirname(
+        OUTPUT_FILE
+    )
+
+    if output_directory:
+
+        os.makedirs(
+            output_directory,
+            exist_ok=True
+        )
+
+    feature_data.to_csv(
+        OUTPUT_FILE,
+        index=False
+    )
+
+    # ========================================================
+    # SUMMARY
+    # ========================================================
+
+    print("\n========================================")
+    print(" ENHANCED FEATURE SUMMARY")
+    print("========================================")
 
     print(
-        f"\nExtracted features: "
-        f"{len(extracted_features)}"
+        "Files processed :",
+        processed
     )
-
-
-    # ========================================================
-    # LOAD FEATURE ORDER
-    # ========================================================
-
-    feature_columns = load_feature_columns()
-
 
     print(
-        f"Expected features : "
-        f"{len(feature_columns)}"
+        "Files failed    :",
+        failed
     )
 
+    print(
+        "Rows            :",
+        len(feature_data)
+    )
+
+    print(
+        "Feature columns :",
+        len(feature_columns)
+    )
+
+    print(
+        "Total columns   :",
+        len(feature_data.columns)
+    )
+
+    print(
+        "NaN values      :",
+        nan_count
+    )
+
+    print(
+        "Infinite values :",
+        infinite_count
+    )
+
+    print(
+        "\nDataset distribution:"
+    )
+
+    print(
+        feature_data["dataset"].value_counts()
+    )
+
+    print(
+        "\nSplit distribution:"
+    )
+
+    print(
+        feature_data["split"].value_counts()
+    )
+
+    print(
+        "\nClass distribution:"
+    )
+
+    print(
+        feature_data["class"]
+        .value_counts()
+        .sort_index()
+    )
+
+    print(
+        "\nOutput:",
+        OUTPUT_FILE
+    )
 
     # ========================================================
     # FEATURE VALIDATION
     # ========================================================
 
-    missing_features = [
-        feature
-        for feature in feature_columns
-        if feature not in extracted_features
-    ]
-
-    extra_features = [
-        feature
-        for feature in extracted_features
-        if feature not in feature_columns
-    ]
-
-
-    if missing_features:
-
-        print(
-            "\nERROR: Missing features:"
-        )
-
-        for feature in missing_features:
-
-            print(
-                f"  - {feature}"
-            )
-
-        return
-
-
-    if extra_features:
-
-        print(
-            "\nERROR: Unexpected features:"
-        )
-
-        for feature in extra_features:
-
-            print(
-                f"  - {feature}"
-            )
-
-        return
-
-
-    if len(extracted_features) != 188:
-
-        print(
-            "\nERROR: Expected 188 features."
-        )
-
-        print(
-            f"Received: {len(extracted_features)}"
-        )
-
-        return
-
-
-    # ========================================================
-    # CREATE MODEL INPUT
-    # ========================================================
-
-    X = pd.DataFrame(
-        [
-            [
-                extracted_features[
-                    feature
-                ]
-                for feature in feature_columns
-            ]
-        ],
-        columns=feature_columns
-    )
-
-
-    # ========================================================
-    # PREDICTION
-    # ========================================================
-
-    prediction = model.predict(
-        X
-    )[0]
-
-
-    # ========================================================
-    # PROBABILITY
-    # ========================================================
-
-    probabilities = model.predict_proba(
-        X
-    )[0]
-
-    classes = model.classes_
-
-    prediction_index = np.argmax(
-        probabilities
-    )
-
-    confidence = probabilities[
-        prediction_index
-    ]
-
-
-    # ========================================================
-    # RESULT
-    # ========================================================
-
     print("\n========================================")
-    print("           PREDICTION RESULT")
+    print(" FEATURE VALIDATION")
     print("========================================")
 
-    print(
-        f"Predicted sound : {prediction}"
-    )
+    success = True
 
-    print(
-        f"Confidence      : "
-        f"{confidence * 100:.2f}%"
-    )
-
-
-    # ========================================================
-    # ALL CLASS PROBABILITIES
-    # ========================================================
-
-    print(
-        "\nClass probabilities:"
-    )
-
-    sorted_predictions = sorted(
-        zip(
-            classes,
-            probabilities
-        ),
-        key=lambda item: item[1],
-        reverse=True
-    )
-
-    for sound_class, probability in sorted_predictions:
+    if processed != expected_files:
 
         print(
-            f"{sound_class:20s}: "
-            f"{probability * 100:.2f}%"
+            f"ERROR: Expected {expected_files} processed files, "
+            f"got {processed}"
         )
 
+        success = False
 
-    # ========================================================
-    # KNOWN CLASSES
-    # ========================================================
-
-    print(
-        "\nKnown classes:"
-    )
-
-    for sound_class in classes:
+    else:
 
         print(
-            f"  - {sound_class}"
+            f"All {expected_files} recordings processed."
         )
 
+    if failed != 0:
 
-    print("\n========================================")
-    print("        PREDICTION COMPLETE")
+        print(
+            f"ERROR: {failed} files failed."
+        )
+
+        success = False
+
+    else:
+
+        print(
+            "No extraction failures."
+        )
+
+    if nan_count != 0:
+
+        print(
+            f"ERROR: Found {nan_count} NaN values."
+        )
+
+        success = False
+
+    else:
+
+        print(
+            "No NaN values."
+        )
+
+    if infinite_count != 0:
+
+        print(
+            f"ERROR: Found {infinite_count} "
+            f"infinite values."
+        )
+
+        success = False
+
+    else:
+
+        print(
+            "No infinite values."
+        )
+
+    if success:
+
+        print(
+            "\nSTATUS: ENHANCED FEATURE EXTRACTION SUCCESSFUL"
+        )
+
+    else:
+
+        print(
+            "\nSTATUS: CHECK FEATURE EXTRACTION"
+        )
+
     print("========================================")
 
 
 # ============================================================
-# PROGRAM ENTRY
+# PROGRAM ENTRY POINT
 # ============================================================
 
 if __name__ == "__main__":
-
     main()

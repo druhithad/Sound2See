@@ -1,0 +1,16 @@
+class,test,train,validation
+Bird,30,140,30
+Cat,30,140,30
+Chicken,5,21,4
+Cow,29,132,28
+Dog,62,273,61
+Donkey,3,18,4
+Frog,21,97,21
+Lion,7,31,7
+Monkey,3,18,4
+Sheep,6,28,6
+car_horn,8,24,8
+crying_baby,8,24,8
+door_wood_knock,8,24,8
+glass_breaking,8,24,8
+siren,8,24,8

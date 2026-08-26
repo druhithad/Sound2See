@@ -1,0 +1,2 @@
+model,datasets,classes,features,training_samples,test_samples,validation_accuracy,validation_precision,validation_recall,validation_weighted_f1,validation_macro_f1,test_accuracy,test_precision,test_recall,test_weighted_f1,test_macro_f1,C,gamma,class_weight
+Combined Class-Weighted RBF SVM,Animal Sounds + ESC-50,15,140,1253,236,0.8425531914893617,0.8314479425363822,0.8425531914893617,0.8286493289493742,0.7360842132713589,0.8516949152542372,0.8482914779701138,0.8516949152542372,0.838342310377273,0.7581062707778596,10,scale,balanced

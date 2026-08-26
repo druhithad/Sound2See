@@ -1,0 +1,2 @@
+model,datasets,classes,features,training_samples,test_samples,accuracy,precision,recall,f1_score
+Combined Baseline SVM,Animal Sounds + ESC-50,15,140,1253,236,0.809322033898305,0.7876769253642582,0.809322033898305,0.7812810981483534

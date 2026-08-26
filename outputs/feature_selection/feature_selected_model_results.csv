@@ -1,0 +1,2 @@
+model,features,C,gamma,test_accuracy,test_precision,test_recall,test_weighted_f1,test_macro_f1
+Feature Selected RBF SVM,120,10,scale,0.847457627118644,0.8389696832122681,0.847457627118644,0.8342244863291439,0.7291543913767229
