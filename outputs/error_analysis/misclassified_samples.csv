@@ -1,0 +1,6 @@
+filename,class,fold,predicted_class,correct
+5-179863-A-43.wav,car_horn,5,door_wood_knock,False
+5-179866-A-43.wav,car_horn,5,door_wood_knock,False
+5-150409-A-42.wav,siren,5,car_horn,False
+5-250026-A-30.wav,door_wood_knock,5,dog,False
+5-217158-A-0.wav,dog,5,siren,False

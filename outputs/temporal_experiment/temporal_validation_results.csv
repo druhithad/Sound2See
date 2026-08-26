@@ -1,0 +1,2 @@
+experiment,training_samples,validation_samples,features,validation_accuracy,validation_precision,validation_recall,validation_f1
+Temporal MFCC + spectral + SVM,144,48,140,0.8333333333333334,0.8541666666666666,0.8333333333333334,0.835515873015873

@@ -1,0 +1,2 @@
+model,training_samples,test_samples,features,accuracy,precision,recall,f1_score
+Temporal SVM,192,48,140,0.9375,0.9398148148148149,0.9375,0.9374183006535949

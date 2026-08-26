@@ -1,0 +1,2 @@
+model,training_samples,test_samples,features,accuracy,precision,recall,f1_score
+SVM,192,48,88,0.8958333333333334,0.8974867724867724,0.8958333333333334,0.8955882352941176
