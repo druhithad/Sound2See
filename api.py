@@ -5,7 +5,7 @@ import traceback
 import joblib
 import pandas as pd
 
-from src.predict_audio import extract_features, load_feature_columns
+from src.predict_audio import extract_features
 
 app = FastAPI(title="Sound2See API")
 
@@ -21,7 +21,7 @@ try:
 
     print("MODEL LOADED SUCCESSFULLY")
 
-except Exception as e:
+except Exception:
     print("MODEL LOAD ERROR:")
     traceback.print_exc()
     model = None
@@ -56,22 +56,27 @@ async def detect(file: UploadFile = File(...)):
 
         features = extract_features(audio_path)
 
-        print("STEP 2: Loading feature columns")
+        print("STEP 2: Preparing features")
 
-        feature_columns = load_feature_columns()
+        # Use the feature names stored inside the trained scaler.
+        # This avoids depending on the missing CSV file.
+        scaler = model.named_steps.get("scaler")
 
-        print("STEP 3: Creating dataframe")
+        if hasattr(scaler, "feature_names_in_"):
+            feature_columns = list(scaler.feature_names_in_)
+        else:
+            feature_columns = list(features.keys())
 
         X = pd.DataFrame(
-            [features],
+            [[features[column] for column in feature_columns]],
             columns=feature_columns
         )
 
-        print("STEP 4: Predicting")
+        print("STEP 3: Predicting")
 
         prediction = model.predict(X)[0]
 
-        print("STEP 5: Predicting probabilities")
+        print("STEP 4: Predicting probabilities")
 
         probabilities = model.predict_proba(X)[0]
 
